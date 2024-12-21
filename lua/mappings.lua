@@ -7,6 +7,7 @@ map("i", "<leader>w",  "<esc>:w<cr>", { desc = "Write file" })
 
 -- Close file
 map("n", "<leader>q",  ":q<cr>", { desc = "Close file" })
+map("n", "<leader>wq",  ":wq<cr>", { desc = "Write & close file" })
 
 -- Remap for dealing with visual line wraps
 map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
