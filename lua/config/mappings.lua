@@ -6,8 +6,9 @@ map("n", "<leader>w",  ":w<cr>", { desc = "Write file" })
 map("i", "<leader>w",  "<esc>:w<cr>", { desc = "Write file" })
 
 -- Close file
-map("n", "<leader>q",  ":q<cr>", { desc = "Close file" })
-map("n", "<leader>wq",  ":wq<cr>", { desc = "Write & close file" })
+map("n", "<leader>q",  ":b#|bd!#<cr>", { desc = "Close file" })
+map("n", "<leader>wq",  ":w<cr>:b#|bd!#<cr>", { desc = "Write & close file" })
+map("n", "<leader>Q",  ":q<cr>", { desc = "Write & close file" })
 
 -- Remap for dealing with visual line wraps
 map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
@@ -93,6 +94,9 @@ map("n", "<leader>zf", "1z=", { desc = "Use first correction" })
 map("n", "<leader>zj", "]s", { desc = "Next error" })
 map("n", "<leader>zk", "[s", { desc = "Previous error" })
 map("n", "<leader>za", "zg", { desc = "Add word" })
+
+-- Terminal
+map("t", "<esc>", "<C-\\><C-n>", { desc = "Escape from terminal mode" })
 
 -- Reload snippets folder
 -- TODO make path system independent
