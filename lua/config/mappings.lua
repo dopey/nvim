@@ -53,9 +53,6 @@ map("i", "<C-l>", function()
   return require("utils.functions").escapePair()
 end)
 
--- save like your are used to
-map({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
-
 -- new file
 map("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New file" })
 -- save file
@@ -67,7 +64,7 @@ map("n", "<leader>fo", "gf", { desc = "Open path under cursor" })
 map({ "n" }, "<leader>sr", ":%s/", { desc = "Buffer search and replace" })
 
 -- toggles
-map("n", "<leader>th", function()
+map("n", "<leader>thc", function()
   utils.notify("Toggling hidden chars", vim.log.levels.INFO, "core.mappings")
   vim.o.list = vim.o.list == false and true or false
 end, { desc = "Toggle hidden chars" })
@@ -75,7 +72,7 @@ map("n", "<leader>tm", function()
   utils.notify("Toggling signcolumn", vim.log.levels.INFO, "core.mappings")
   vim.o.signcolumn = vim.o.signcolumn == "yes" and "no" or "yes"
 end, { desc = "Toggle signcolumn" })
-map("n", "<leader>tv", function()
+map("n", "<leader>tve", function()
   utils.notify("Toggling virtualedit", vim.log.levels.INFO, "core.mappings")
   vim.o.virtualedit = vim.o.virtualedit == "all" and "block" or "all"
 end, { desc = "Toggle virtualedit" })
@@ -97,6 +94,12 @@ map("n", "<leader>za", "zg", { desc = "Add word" })
 
 -- Terminal
 map("t", "<esc>", "<C-\\><C-n>", { desc = "Escape from terminal mode" })
+--map("t", "<leader>tn", "<cmd>lua _NODE_TOGGLE()<cr>", { desc = "Toggle Node terminal" })
+--map("t", "<leader>th", "<cmd>lua _HTOP_TOGGLE()<cr>", { desc = "Toggle HTOP terminal" })
+--map("t", "<leader>tp", "<cmd>lua _PYTHON_TOGGLE()<cr>", { desc = "Toggle Python terminal" })
+map("t", "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", { desc = "Toggle Floating terminal" })
+map("t", "<leader>th", "<cmd>ToggleTerm direction=horizontal size=30<cr>", { desc = "Toggle horizontal terminal" })
+map("t", "<leader>tv", "<cmd>ToggleTerm direction=vertical size=80<cr>", { desc = "Toggle vertical terminal" })
 
 -- Reload snippets folder
 -- TODO make path system independent
