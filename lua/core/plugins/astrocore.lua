@@ -30,7 +30,8 @@ return {
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = true, -- sets vim.opt.wrap
-        shell = "/bin/zsh --login"
+        shell = "/bin/zsh --login", -- sets shell to zsh login shell (sources ~/.zprofile)
+        clipboard = "" -- prevents vim cuts from overwriting the system clipboard 
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
@@ -65,9 +66,6 @@ return {
         -- ["<Leader>b"] = { desc = "Buffers" },
 
         -- setting a mapping to false will disable it
-        -- ["<C-S>"] = false,
-        ["<Leader>w"] = { ":w<cr>", desc = "Write file" },
-        ["<Leader>q"] = { ":q<cr>", desc = "Close file" },
         ["<Leader>f"] = { "O<esc>j", desc = "New line above" },
         ["<Leader>g"] = { "o<esc>k", desc = "New line below" }
       },
