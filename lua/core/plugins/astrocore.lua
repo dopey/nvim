@@ -31,7 +31,7 @@ return {
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = true, -- sets vim.opt.wrap
         shell = "/bin/zsh --login", -- sets shell to zsh login shell (sources ~/.zprofile)
-        clipboard = "" -- prevents vim cuts from overwriting the system clipboard 
+        clipboard = "", -- prevents vim cuts from overwriting the system clipboard
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
