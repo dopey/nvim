@@ -3,7 +3,11 @@ local api = vim.api
 --- Remove all trailing whitespace on save
 local TrimWhiteSpaceGrp = api.nvim_create_augroup("TrimWhiteSpaceGrp", { clear = true })
 api.nvim_create_autocmd("BufWritePre", {
-  command = [[:%s/\s\+$//e]],
+  callback = function()
+    local save_cursor = vim.fn.getpos(".")
+    pcall(function() vim.cmd [[%s/\s\+$//e]] end)
+    vim.fn.setpos(".", save_cursor)
+  end,
   group = TrimWhiteSpaceGrp,
 })
 
