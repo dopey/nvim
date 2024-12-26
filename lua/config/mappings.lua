@@ -10,9 +10,6 @@ map("n", "<leader>q",  ":b#|bd!#<cr>", { desc = "Quit" })
 map("n", "<leader>wq",  ":w<cr>:b#|bd!#<cr>", { desc = "Write & Quit" })
 map("n", "<leader>Q",  ":q<cr>", { desc = "Write & close file" })
 
--- Close buffer
-map("n", "<leader>c",  ":close<cr>", { desc = "Close buffer" })
-
 -- Remap for dealing with visual line wraps
 map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
 map("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
