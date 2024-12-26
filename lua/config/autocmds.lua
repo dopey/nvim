@@ -1,4 +1,3 @@
-local utils = require("utils.functions")
 local api = vim.api
 
 --- Remove all trailing whitespace on save

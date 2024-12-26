@@ -31,7 +31,7 @@ return {
         end)
 
         -- Actions
-        map('n', '<leader>hs', gitsigns.stage_hunk, { desc = "Stage hunk" })
+        map('n', '<leader>hs', gitsigns.stage_hunk, { desc = "Stage hunk" }) 
         map('n', '<leader>hr', gitsigns.reset_hunk, { desc = "Reset hunk" })
         map('v', '<leader>hs', function() gitsigns.stage_hunk {vim.fn.line('.'), vim.fn.line('v')} end, { desc = "Stage hunk" })
         map('v', '<leader>hr', function() gitsigns.reset_hunk {vim.fn.line('.'), vim.fn.line('v')} end, { desc = "Reset hunk" })
@@ -42,7 +42,7 @@ return {
         map('n', '<leader>hb', function() gitsigns.blame_line{full=true} end, { desc = "Blame line" })
         map('n', '<leader>tb', gitsigns.toggle_current_line_blame, { desc = "Toggle current line blame" })
         map('n', '<leader>hd', gitsigns.diffthis, { desc = "Show diff" })
-        map('n', '<leader>hD', 
+        map('n', '<leader>hD',
           function()
             vim.cmd(':wincmd p')
             vim.cmd(':q')
