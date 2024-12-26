@@ -93,7 +93,6 @@ map("n", "<leader>zk", "[s", { desc = "Previous error" })
 map("n", "<leader>za", "zg", { desc = "Add word" })
 
 -- Terminal
-map("t", "<esc>", "<C-\\><C-n>", { desc = "Escape from terminal mode" })
 --map("t", "<leader>tn", "<cmd>lua _NODE_TOGGLE()<cr>", { desc = "Toggle Node terminal" })
 --map("t", "<leader>th", "<cmd>lua _HTOP_TOGGLE()<cr>", { desc = "Toggle HTOP terminal" })
 --map("t", "<leader>tp", "<cmd>lua _PYTHON_TOGGLE()<cr>", { desc = "Toggle Python terminal" })
