@@ -2,13 +2,13 @@ local utils = require("utils.functions")
 local map = vim.keymap.set
 
 -- Write
-map("n", "<leader>w",  ":w<cr>", { desc = "Write file" })
-map("i", "<leader>w",  "<esc>:w<cr>", { desc = "Write file" })
+map("n", ",w",  ":w<cr>", { desc = "Write file" })
+map("i", ",w",  "<esc>:w<cr>", { desc = "Write file" })
 
 -- Quit
-map("n", "<leader>q",  ":b#|bd!#<cr>", { desc = "Quit" })
-map("n", "<leader>wq",  ":w<cr>:b#|bd!#<cr>", { desc = "Write & Quit" })
-map("n", "<leader>Q",  ":q<cr>", { desc = "Write & close file" })
+map("n", ",q",  ":b#|bd!#<cr>", { desc = "Quit" })
+map("n", ",wq",  ":w<cr>:b#|bd!#<cr>", { desc = "Write & Quit" })
+map("n", ",Q",  ":q<cr>", { desc = "Write & close file" })
 
 -- Remap for dealing with visual line wraps
 map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
