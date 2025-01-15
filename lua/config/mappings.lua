@@ -108,3 +108,11 @@ map("t", "<leader>tv", "<cmd>ToggleTerm direction=vertical size=80<cr>", { desc 
 -- Reload snippets folder
 -- TODO make path system independent
 map("n", "<leader>ms", "<cmd>source ~/.config/nvim/snippets/*<cr>", { desc = "Reload snippets" })
+
+-- Opening files in Github
+-- for repository page
+map("n", "<Leader>gr", ":OpenInGHRepo <CR>", { desc = "Browe repo in GitHub", silent = true, noremap = true })
+
+-- for current file page
+map("n", "<Leader>gf", ":OpenInGHFile <CR>", { desc = "Browse file in Github", silent = true, noremap = true })
+map("v", "<Leader>gf", ":OpenInGHFileLines <CR>", { desc = "Browse file in Github", silent = true, noremap = true })

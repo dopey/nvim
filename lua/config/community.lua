@@ -11,6 +11,7 @@ return {
   { import = "astrocommunity.colorscheme.nightfox-nvim" },
   { import = "astrocommunity.completion.cmp-cmdline" },
   { import = "astrocommunity.fuzzy-finder.fzf-lua" },
+  { import = "astrocommunity.git.openingh-nvim" },
   { import = "astrocommunity.icon.mini-icons" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.lua" },
