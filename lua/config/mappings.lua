@@ -112,7 +112,6 @@ map("n", "<leader>ms", "<cmd>source ~/.config/nvim/snippets/*<cr>", { desc = "Re
 -- Opening files in Github
 -- for repository page
 map("n", "<Leader>gr", ":OpenInGHRepo <CR>", { desc = "Browe repo in GitHub", silent = true, noremap = true })
-
 -- for current file page
 map("n", "<Leader>gf", ":OpenInGHFile <CR>", { desc = "Browse file in Github", silent = true, noremap = true })
 map("v", "<Leader>gf", ":OpenInGHFileLines <CR>", { desc = "Browse file in Github", silent = true, noremap = true })
