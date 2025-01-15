@@ -22,6 +22,11 @@ map("v", ">", ">gv")
 map("v", "p", '"_dp')
 map("v", "P", '"_dP')
 
+-- yank into global clipboard
+map("n", "<leader>y", '"+y')
+map("v", "<leader>y", '"+y')
+map("n", "<leader>Y", '"+Y')
+
 -- window
 map("n", "<leader>ws", "<cmd>split<cr>", { desc = "Horizontal split" })
 map("n", "<leader>wv", "<cmd>vsplit<cr>", { desc = "Vertical split" })
