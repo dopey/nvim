@@ -28,6 +28,7 @@ return {
         "gosum",
         "gotmpl",
         "gowork",
+        "hcl",
         "html",
         "json",
         "javascript",

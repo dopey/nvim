@@ -37,6 +37,12 @@ return {
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
+
+        -- Allow vim-terraform to align settings automatically with Tabularize.
+        terraform_align = 1,
+        -- Allow vim-terraform to automatically format *.tf and *.tfvars files with
+        -- terraform fmt. You can also do this manually with the :TerraformFmt command.
+        terraform_fmt_on_save = 1,
       },
     },
     -- Mappings can be configured through AstroCore as well.
