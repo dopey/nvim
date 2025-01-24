@@ -19,8 +19,7 @@ map("v", "<", "<gv")
 map("v", ">", ">gv")
 
 -- paste over currently selected text without yanking it
-map("v", "p", '"_dp')
-map("v", "P", '"_dP')
+map("v", "p", '"_dP')
 
 -- yank into global clipboard
 map("n", "<leader>y", '"+y')
