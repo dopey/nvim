@@ -114,3 +114,7 @@ map("n", "<Leader>gr", ":OpenInGHRepo <CR>", { desc = "Browe repo in GitHub", si
 -- for current file page
 map("n", "<Leader>gf", ":OpenInGHFile <CR>", { desc = "Browse file in Github", silent = true, noremap = true })
 map("v", "<Leader>gf", ":OpenInGHFileLines <CR>", { desc = "Browse file in Github", silent = true, noremap = true })
+
+-- Add line above or below
+map("n", ",f", "O<esc>j", {desc = "New line above" })
+map("n", ",g", "o<esc>k", {desc = "New line below" })
