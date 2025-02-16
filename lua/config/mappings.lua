@@ -83,7 +83,7 @@ end, { desc = "Toggle virtualedit" })
 map("n", "<leader>tO", "<cmd>lua require('utils.functions').toggle_colorcolumn()<cr>", { desc = "Toggle colorcolumn" })
 map(
   "n",
-  "<leader>tt",
+  "<leader>tvt",
   "<cmd>lua require('core.plugins.lsp.utils').toggle_virtual_text()<cr>",
   { desc = "Toggle Virtualtext" }
 )
@@ -100,9 +100,14 @@ map("n", "<leader>za", "zg", { desc = "Add word" })
 --map("t", "<leader>tn", "<cmd>lua _NODE_TOGGLE()<cr>", { desc = "Toggle Node terminal" })
 --map("t", "<leader>th", "<cmd>lua _HTOP_TOGGLE()<cr>", { desc = "Toggle HTOP terminal" })
 --map("t", "<leader>tp", "<cmd>lua _PYTHON_TOGGLE()<cr>", { desc = "Toggle Python terminal" })
-map("t", "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", { desc = "Toggle Floating terminal" })
-map("t", "<leader>th", "<cmd>ToggleTerm direction=horizontal size=30<cr>", { desc = "Toggle horizontal terminal" })
-map("t", "<leader>tv", "<cmd>ToggleTerm direction=vertical size=80<cr>", { desc = "Toggle vertical terminal" })
+map("n", "<leader>th", "<cmd>ToggleTerm direction=horizontal size=15<cr>", { desc = "Toggle horizontal terminal" })
+map("t", "<leader>th", "<cmd>ToggleTerm<cr>", { desc = "Toggle horizontal terminal" })
+map("n", "<leader>tt", "<cmd>ToggleTerm direction=horizontal size=15<cr>", { desc = "Toggle horizontal terminal" })
+map("t", "<leader>tt", "<cmd>ToggleTerm<cr>", { desc = "Toggle horizontal terminal" })
+map("n", "<leader>tf", "<cmd>ToggleTerm direction=floating<cr>", { desc = "Toggle Floating terminal" })
+map("t", "<leader>tf", "<cmd>ToggleTerm<cr>", { desc = "Toggle Floating terminal" })
+map("n", "<leader>tv", "<cmd>ToggleTerm size=80 direction=vertical<cr>", { desc = "Toggle vertical terminal" })
+map("t", "<leader>tv", "<cmd>ToggleTerm<cr>", { desc = "Toggle vertical terminal" })
 
 -- Reload snippets folder
 -- TODO make path system independent
