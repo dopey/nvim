@@ -32,6 +32,8 @@ return {
         wrap = true, -- sets vim.opt.wrap
         shell = "/bin/zsh --login", -- sets shell to zsh login shell (sources ~/.zprofile)
         clipboard = "", -- prevents vim cuts from overwriting the system clipboard
+        tabstop = 4, -- A TAB character looks like X spaces
+        shiftwidth = 4, -- Number of spaces inserted when indenting
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
