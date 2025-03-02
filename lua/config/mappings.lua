@@ -123,3 +123,6 @@ map("v", "<Leader>gf", ":OpenInGHFileLines <CR>", { desc = "Browse file in Githu
 -- Add line above or below
 map("n", ",f", "O<esc>j", {desc = "New line above" })
 map("n", ",g", "o<esc>k", {desc = "New line below" })
+
+-- Select recently pasted text
+map("n", "gp", "`[v`]", { desc = "Select pasted" })
