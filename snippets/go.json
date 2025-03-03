@@ -1,0 +1,9 @@
+{
+  "Printf": {
+    "prefix": ["ff"],
+    "body": [
+        "fmt.Printf(\"$1=${2:%v}\\n\", $1)"
+    ],
+    "description": "fmt.Printf snippet"
+  }
+}

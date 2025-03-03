@@ -2,6 +2,65 @@ return {
   -- Disable alpha-nvim
   { 'goolord/alpha-nvim', enabled = false },
   {
+    "hrsh7th/nvim-cmp",
+    opts = function(plugin, opts)
+      -- opts parameter is the default options table
+      -- the function is lazy loaded so cmp is able to be required
+      local cmp = require("cmp")
+      local luasnip = require("luasnip")
+      -- use `extend_tbl` to easily merge into the `opts` table
+      -- NOTE: this function does not merge in place and needs to be
+      --       returned at the end of the function
+      return require("astrocore").extend_tbl(opts, {
+        mapping = {
+          ['<CR>'] = cmp.mapping(function(fallback)
+              if cmp.visible() then
+                  if luasnip.expandable() then
+                      luasnip.expand()
+                  else
+                      cmp.confirm({
+                          select = true,
+                      })
+                  end
+              else
+                  fallback()
+              end
+          end),
+
+          ["<Tab>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+              cmp.select_next_item()
+            elseif luasnip.locally_jumpable(1) then
+              luasnip.jump(1)
+            else
+              fallback()
+            end
+          end, { "i", "s" }),
+
+          ["<C-Y>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+              cmp.select_next_item()
+            elseif luasnip.locally_jumpable(1) then
+              luasnip.jump(1)
+            else
+              fallback()
+            end
+          end, { "i", "s" }),
+
+          ["<S-Tab>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+              cmp.select_prev_item()
+            elseif luasnip.locally_jumpable(-1) then
+              luasnip.jump(-1)
+            else
+              fallback()
+            end
+          end, { "i", "s" }),
+        },
+      })
+    end,
+  },
+  {
     'lewis6991/gitsigns.nvim',
     opts = {
       on_attach = function(bufnr)
