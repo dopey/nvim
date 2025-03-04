@@ -2,6 +2,19 @@ return {
   -- Disable alpha-nvim
   { 'goolord/alpha-nvim', enabled = false },
   {
+    'RRethy/vim-illuminate',
+    opts = function(_, opts)
+      local illuminate = require("illuminate")
+      local map = vim.keymap.set
+
+      map("n", "<C-n>", function() illuminate.goto_next_reference(true) end, { desc = "Go to next reference" })
+      map("n", "<C-p>", function() illuminate.goto_prev_reference(true) end, { desc = "Go to previous reference" })
+
+      -- disable default keymaps
+      opts.disable_keymaps = true
+    end,
+  },
+  {
     "hrsh7th/nvim-cmp",
     opts = function(plugin, opts)
       -- opts parameter is the default options table
