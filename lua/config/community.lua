@@ -10,7 +10,7 @@ return {
   { import = "astrocommunity.bars-and-lines.vim-illuminate" },
   { import = "astrocommunity.colorscheme.nightfox-nvim" },
   { import = "astrocommunity.completion.cmp-cmdline" },
-  { import = "astrocommunity.editing-support.multicursors-nvim" },
+  --{ import = "astrocommunity.editing-support.multicursors-nvim" },
   { import = "astrocommunity.fuzzy-finder.fzf-lua" },
   { import = "astrocommunity.git.openingh-nvim" },
   { import = "astrocommunity.icon.mini-icons" },
