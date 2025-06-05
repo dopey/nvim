@@ -1,8 +1,8 @@
 local M = {}
 
 local utils = require("utils.functions")
-local plugins = vim.g.config.plugins
-local tex = vim.g.config.plugins.tex
+local plugins = require("core.plugins")
+local tex = vim.g.core.plugins.tex
 
 local health = vim.health
 local _ok = health.ok
