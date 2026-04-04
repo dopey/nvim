@@ -12,6 +12,8 @@ return {
 
       -- disable default keymaps
       opts.disable_keymaps = true
+      -- treesitter provider causes nil node errors in Neovim 0.12 (upstream vim-illuminate bug)
+      opts.providers = { 'lsp', 'regex' }
     end,
   },
   {
