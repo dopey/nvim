@@ -78,6 +78,7 @@ return {
   {
     'lewis6991/gitsigns.nvim',
     opts = {
+      current_line_blame = true,
       on_attach = function(bufnr)
         local gitsigns = require('gitsigns')
 
@@ -114,6 +115,7 @@ return {
         map('n', '<leader>hR', gitsigns.reset_buffer, { desc = "Reset buffer" })
         map('n', '<leader>hp', gitsigns.preview_hunk, { desc = "Preview hunk" })
         map('n', '<leader>hb', function() gitsigns.blame_line{full=true} end, { desc = "Blame line" })
+        map('n', '<leader>gB', function() gitsigns.blame() end, { desc = "Blame window" })
         map('n', '<leader>tb', gitsigns.toggle_current_line_blame, { desc = "Toggle current line blame" })
         map('n', '<leader>hd', gitsigns.diffthis, { desc = "Show diff" })
         map('n', '<leader>hD',
